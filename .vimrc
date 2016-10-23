@@ -49,7 +49,7 @@ Plug 'surround.vim'               "great plugin
 Plug 'commentary.vim'             "comments
 Plug 'delimitMate.vim'            "autoclosing brackets, quotes and oth...
 ""Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'SirVer/ultisnips' " Track the engine.
+"Plug 'SirVer/ultisnips' " Track the engine.
 Plug 'honza/vim-snippets' " Snippets are separated from the engine. Add this if you want them:
 Plug 'terryma/vim-multiple-cursors'
 Plug 'EasyMotion'
