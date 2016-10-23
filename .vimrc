@@ -48,7 +48,7 @@ Plug 'godlygeek/tabular', { 'on': 'Tabularize' } " autointend with separator cha
 Plug 'surround.vim'               "great plugin
 Plug 'commentary.vim'             "comments
 Plug 'delimitMate.vim'            "autoclosing brackets, quotes and oth...
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+""Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'SirVer/ultisnips' " Track the engine.
 Plug 'honza/vim-snippets' " Snippets are separated from the engine. Add this if you want them:
 Plug 'terryma/vim-multiple-cursors'
@@ -67,7 +67,7 @@ Plug 'scrooloose/syntastic'       "syntax checking for errors
 " ==================== GIT specific  ====================
 
 Plug 'tpope/vim-fugitive'         "git integration
-Plug 'airblade/vim-gitgutter' " git modify indicator
+" IPlug 'airblade/vim-gitgutter' " git modify indicator
 Plug 'xuyuanp/nerdtree-git-plugin' " git changes indicator (in filesystem)
 
 " ==================== language specific  ====================
@@ -254,7 +254,7 @@ if has("unix")
   let s:uname = system("uname -s")
   if matchstr(s:uname, "Darwin") == "Darwin"
     set guifont=DroidSansMonoForPowerline\ Nerd\ Font:h16
-    set macmeta " for option-key working on mac
+    "set macmeta " for option-key working on mac
   else
     set guifont=DroidSansMonoForPower\ Line\ Nerd\ Font\ 12
   endif
