@@ -507,11 +507,11 @@ nnoremap o e<Right>
 vnoremap o e<Right>
 
 " end of line
-nnoremap h I
-vnoremap h I
+nnoremap h ^
+vnoremap h ^
 " end of line
-nnoremap H A
-vnoremap H A
+nnoremap H $
+vnoremap H $
 
 " to sentence begin
 nnoremap J (
@@ -529,41 +529,124 @@ vnoremap I {
 nnoremap K }
 vnoremap K }
 
-" new line below
-nnoremap <CR> o<Esc>
+" match paren
+nnoremap p %
+vnoremap p %
 
+" match word under cursor
+nnoremap y *
+" vnoremap y *
+
+" match word under cursor
+nnoremap Y #
+vnoremap Y #
+
+" new line below/ above
+nnoremap <CR> o
+nnoremap <S-CR> O
+
+" replace char
+nnoremap R c 
+
+" change with visual mode
+vnoremap r c
+" delete word right/left
+nnoremap e dw
+nnoremap w db
+
+" delete word right/left
+nnoremap e dw
+nnoremap w db
+
+" delete line to the end/begin
+nnoremap E D
+nnoremap W d^
+
+" delete
+nnoremap x di
+nnoremap xc x
+" delete word forward
+nnoremap xo del
+" delte word backword
+nnoremap xu dbh
+" delete line
+nnoremap xx dd
+vnoremap x d
+
+" double line
+" nnoremap d Vyp
+" vnoremap d yp
+" vnoremap d yp
+
+" change
+nnoremap X c
+vnoremap X c
+
+" copy
+nnoremap c y
+nnoremap cc yy
+" copy region and left at the end
+vnoremap c y`]
+
+" paste after/before
+nnoremap v p
+vnoremap v p
+nnoremap V P
+vnoremap V P
 
 " toggle insert-mode
-nnoremap v i
+nnoremap a i
+nnoremap A a
+
+" SELECTIONS
+
+" select all
+nnoremap sa ggvG
+
 " toggle visual-mod (selection-mode)
-" vunmap s
-" sunmap s
 nnoremap ss v
+
 " visual line selection
 nnoremap sl V
+
+" visual block(rectangular) selection
+nnoremap sr <C-v>
+
 " selection of text-objects
+" in
 nnoremap s vi
+" out
 nnoremap S va
+
+" exit visual mode
+vnoremap s <Esc>
+
 " FIX does not work 
 nnoremap <C-s> <C-v>
 
-vnoremap v a
-vnoremap s vi
 
 "insert mode movements
-"iunmap <C-i>
-"iunmap <C-k>
-"iunmap <C-j>
-"iunmap <C-l>
 
 inoremap <C-i> <Up>
 inoremap <C-k> <Down>
 inoremap <C-j> <Left>
 inoremap <C-l> <Right>
 
+" swap cmd and repeat search
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
+" define macros
+nnoremap ` q
+" repeat
+nnoremap q .
+
 " FIX not working
 "nnoremap <C-;> Ak<Esc>
 ""inoremap <C-Space> <C-n>
 
 "################################ @keymaps #################################
+
 
