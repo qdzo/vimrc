@@ -357,12 +357,12 @@ nnoremap <silent> <C-h> :tabprevious<CR>
 :nnoremap g{ {dap}p{
 
 " swap lines
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-vnoremap <C-j> :m '>+1<CR>gv=gv
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-k> :m '<-2<CR>gv=gv
+"nnoremap <C-j> :m .+1<CR>==
+"nnoremap <C-k> :m .-2<CR>==
+"vnoremap <C-j> :m '>+1<CR>gv=gv
+"inoremap <C-j> <Esc>:m .+1<CR>==gi
+"inoremap <C-k> <Esc>:m .-2<CR>==gi
+"vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " #airline power symbols
 let g:airline_powerline_fonts = 1
@@ -481,6 +481,89 @@ nnoremap <C-t> :<C-u>Unite -no-split -buffer-name=tags tag<CR>
 nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru file_mru<CR>
 nnoremap <leader>m :<C-u>Unite -quick-match -no-split -buffer-name=bookmark bookmark<CR>
 nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=grep grep:!<CR>
+
+"################################ Ergo project #############################
+
+" undo/redo 
+nnoremap z u
+nnoremap <S-z> <C-r>
+
+" basic movements
+nnoremap i <Up>
+vnoremap i <Up>
+nnoremap k <Down>
+vnoremap k <Down>
+nnoremap j <Left>
+vnoremap j <Left>
+nnoremap l <Right>
+vnoremap l <Right>
+
+" word backward (emacs like hehavior)
+nnoremap u b<Left>
+vnoremap u b<Left>
+
+" word forward (emacs like hehavior)
+nnoremap o e<Right>
+vnoremap o e<Right>
+
+" end of line
+nnoremap h I
+vnoremap h I
+" end of line
+nnoremap H A
+vnoremap H A
+
+" to sentence begin
+nnoremap J (
+vnoremap J (
+
+" to sentence end
+nnoremap L )
+vnoremap L )
+
+" to start of paragraph 
+nnoremap I {
+vnoremap I {
+
+" to start of paragraph 
+nnoremap K }
+vnoremap K }
+
+" new line below
+nnoremap <CR> o<Esc>
+
+
+" toggle insert-mode
+nnoremap v i
+" toggle visual-mod (selection-mode)
+" vunmap s
+" sunmap s
+nnoremap ss v
+" visual line selection
+nnoremap sl V
+" selection of text-objects
+nnoremap s vi
+nnoremap S va
+" FIX does not work 
+nnoremap <C-s> <C-v>
+
+vnoremap v a
+vnoremap s vi
+
+"insert mode movements
+"iunmap <C-i>
+"iunmap <C-k>
+"iunmap <C-j>
+"iunmap <C-l>
+
+inoremap <C-i> <Up>
+inoremap <C-k> <Down>
+inoremap <C-j> <Left>
+inoremap <C-l> <Right>
+
+" FIX not working
+"nnoremap <C-;> Ak<Esc>
+""inoremap <C-Space> <C-n>
 
 "################################ @keymaps #################################
 
